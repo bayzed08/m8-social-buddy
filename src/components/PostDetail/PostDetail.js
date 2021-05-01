@@ -16,7 +16,7 @@ const PostDetail = () => {
                 console.log(data);
                 setPost(data)
              })
-    }, []);
+    }, [postId]);
     //const { id, userId, title, body } = post;
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const PostDetail = () => {
         fetch(url2)
             .then(res => res.json())
         .then(data=>setComment(data))
-    }, []);
+    }, [postId]);
 
 
     //console.log(post);
